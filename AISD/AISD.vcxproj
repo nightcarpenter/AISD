@@ -127,11 +127,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="merge_sorts.cpp" />
     <ClCompile Include="n_square_sorts.cpp" />
+    <ClCompile Include="time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="functions.h" />
     <ClInclude Include="merge_sort.h" />
     <ClInclude Include="n_square_sorts.h" />
+    <ClInclude Include="time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
