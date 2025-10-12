@@ -22,4 +22,6 @@ int main() {
 
     PrintVector(vector<int>(a.begin(), a.begin() + 3));
     PrintVectorIsSorted(a);
+
+    return 0;
 }
