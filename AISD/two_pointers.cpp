@@ -23,3 +23,19 @@ int TwoPointers1(const vector<int>& a, int t) {
 
     return res;
 }
+
+
+int TwoPointers2(const vector<int>& a) {
+    int res = 0;
+    int j = 0;
+
+    for (int i = 0; i < a.size(); ++i) {
+        while (j < a.size() && (a[j] - a[i]) <= 5) {
+            ++j;
+        }
+
+        res = max(res, j - i);
+    }
+
+    return res;
+}
