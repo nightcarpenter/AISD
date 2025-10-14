@@ -16,8 +16,6 @@ void PrintTime(chrono::time_point<chrono::high_resolution_clock> start,
 
     auto duration = end - start;
 
-    cout << endl << duration.count() << endl;
-
     auto hours = chrono::duration_cast<chrono::hours>(duration);
     auto minutes = chrono::duration_cast<chrono::minutes>(duration);
     auto seconds = chrono::duration_cast<chrono::seconds>(duration);
