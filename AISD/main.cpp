@@ -17,24 +17,11 @@ using namespace std;
 
 
 int main() {
-    vector<int> a = { 4, 20, 13, 40, 50 };
-    PrintVector(a);
+    vector<int> x = {4, 12, 18, 2, 5, 19, 18, 4, 3, 88, 13, 1};
 
-    MergeSortVector(a);
-    PrintVector(a);
-
-    int t = 8;
-
-    int res = TwoPointers2(a);
-
-    cout << endl;
-    cout << res << endl;
-
-    assert(TwoPointers2({ 4, 4, 4, 4, 4 }) == 5);
-    assert(TwoPointers2({ 1, 2, 3, 4, 5 }) == 5);
-    assert(TwoPointers2({ 3, 4, 5, 12, 20 }) == 3);
-    assert(TwoPointers2({ 4, 13, 24, 40, 50 }) == 1);
-    assert(TwoPointers2({ 1, 2, 2, 2, 3, 4, 4, 6 }) == 8);
+    vector<int> y = MergeSortTwo(x);
+    
+    PrintVector(y);
 
     return 0;
 }
