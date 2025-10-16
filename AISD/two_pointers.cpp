@@ -75,3 +75,32 @@ int TwoPointers2(const vector<int>& a) {
 
     return res;
 }
+
+
+int ThreeSums(const vector<int>& x) {
+    int n = x.size();
+    int i = 0;
+    int j = n - 1;
+    int res = 0;
+    int sum1 = x[i];
+    int sum2 = x[j];
+
+    while (i < j) {
+        if (sum1 > sum2) {
+            --j;
+            sum2 += x[j];
+        }
+        else if (sum1 < sum2) {
+            ++i;
+            sum1 += x[i];
+        }
+        else {
+            res = sum1;
+
+            ++i;
+            sum1 += x[i];
+        }
+    }
+
+    return res;
+}

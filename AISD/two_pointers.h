@@ -2,11 +2,15 @@
 
 #include <vector>
 
+using namespace std;
 
-std::vector<int> MergeTwo(const std::vector<int>& a, const std::vector<int>& b);
 
-std::vector<int> MergeSortTwo(const std::vector<int>& x);
+vector<int> MergeTwo(const vector<int>& a, const vector<int>& b);
 
-int TwoPointers1(const std::vector<int>& a, int t);
+vector<int> MergeSortTwo(const vector<int>& x);
 
-int TwoPointers2(const std::vector<int>& a);
+int TwoPointers1(const vector<int>& a, int t);
+
+int TwoPointers2(const vector<int>& a);
+
+int ThreeSums(const vector<int>& x);

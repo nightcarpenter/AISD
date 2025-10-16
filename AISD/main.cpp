@@ -17,11 +17,21 @@ using namespace std;
 
 
 int main() {
-    vector<int> x = {4, 12, 18, 2, 5, 19, 18, 4, 3, 88, 13, 1};
+    chrono::time_point<chrono::high_resolution_clock> start = MarkTime();
 
-    vector<int> y = MergeSortTwo(x);
-    
-    PrintVector(y);
+    vector<int> x = { 1, 3, 4, 1, 4, 1, 7 };
+
+    int res = ThreeSums(x);
+    cout << endl;
+    cout << res << endl;
+
+    assert(ThreeSums({1, 3, 1, 1, 4}) == 5);
+    assert(ThreeSums({ 1, 3, 2, 1, 4 }) == 4);
+    assert(ThreeSums({ 4, 1, 2 }) == 0);
+
+    chrono::time_point<chrono::high_resolution_clock> end = MarkTime();
+
+    PrintTime(start, end);
 
     return 0;
 }

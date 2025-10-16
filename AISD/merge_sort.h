@@ -2,9 +2,11 @@
 
 #include <vector>
 
+using namespace std;
 
-std::vector<int> Merge(std::vector<int> vec1, std::vector<int> vec2);
 
-std::vector<int> SortMerge(const std::vector<int>& vec);
+vector<int> Merge(vector<int> vec1, vector<int> vec2);
 
-void MergeSortVector(std::vector<int>& vec);
+vector<int> SortMerge(const vector<int>& vec);
+
+void MergeSortVector(vector<int>& vec);
