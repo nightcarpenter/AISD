@@ -17,22 +17,47 @@ using namespace std;
 using namespace std::chrono;
 
 
+bool isBadVersion(int k) {
+    return (k < 1000000000) ? false: true;
+}
+
+
+int firstBadVersion(int n) {
+    int i = 1;
+    int j = n;
+    int k = (i + j) / 2;
+
+
+    while (true) {
+        if (isBadVersion(k)) {
+            if (!isBadVersion(k - 1)) {
+                break;
+            }
+            j = k;
+        }
+        else {
+            i = k;
+        }
+
+        if (k == i) {
+            ++k;
+        }
+        else if (k == j) {
+            --k;
+        }
+        else {
+            k = (i + j) / 2;
+        }
+        
+    }
+
+    return k;
+}
+
+
 int main() {
-    time_point<high_resolution_clock> start = MarkTime();
-
-    vector<int> x = { 1, 3, 4, 1, 4, 1, 7 };
-
-    int res = ThreeSums(x);
-    cout << endl;
-    cout << res << endl;
-
-    assert(ThreeSums({1, 3, 1, 1, 4}) == 5);
-    assert(ThreeSums({ 1, 3, 2, 1, 4 }) == 4);
-    assert(ThreeSums({ 4, 1, 2 }) == 0);
-
-    time_point<high_resolution_clock> end = MarkTime();
-
-    PrintTime(start, end);
+    int k = firstBadVersion(2000000000);
+    cout << k << endl;
 
     return 0;
 }
