@@ -1,26 +1,27 @@
-#include "time.h";
+#include "time.h"
 
 #include <iostream>
 #include <chrono>
 
 using namespace std;
+using namespace std::chrono;
 
 
-chrono::time_point<chrono::high_resolution_clock> MarkTime() {
-    return chrono::high_resolution_clock::now();
+time_point<high_resolution_clock> MarkTime() {
+    return high_resolution_clock::now();
 }
 
 
-void PrintTime(chrono::time_point<chrono::high_resolution_clock> start,
-    chrono::time_point<chrono::high_resolution_clock> end) {
+void PrintTime(time_point<high_resolution_clock> start,
+    time_point<high_resolution_clock> end) {
 
     auto duration = end - start;
 
-    auto hours = chrono::duration_cast<chrono::hours>(duration);
-    auto minutes = chrono::duration_cast<chrono::minutes>(duration);
-    auto seconds = chrono::duration_cast<chrono::seconds>(duration);
-    auto milliseconds = chrono::duration_cast<chrono::milliseconds>(duration);
-    auto microseconds = chrono::duration_cast<chrono::microseconds>(duration);
+    auto hours = duration_cast<chrono::hours>(duration);
+    auto minutes = duration_cast<chrono::minutes>(duration);
+    auto seconds = duration_cast<chrono::seconds>(duration);
+    auto milliseconds = duration_cast<chrono::milliseconds>(duration);
+    auto microseconds = duration_cast<chrono::microseconds>(duration);
 
     cout << endl;
     cout << "Execution time: ";

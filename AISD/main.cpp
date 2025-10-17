@@ -14,10 +14,11 @@
 #include <cassert>
 
 using namespace std;
+using namespace std::chrono;
 
 
 int main() {
-    chrono::time_point<chrono::high_resolution_clock> start = MarkTime();
+    time_point<high_resolution_clock> start = MarkTime();
 
     vector<int> x = { 1, 3, 4, 1, 4, 1, 7 };
 
@@ -29,7 +30,7 @@ int main() {
     assert(ThreeSums({ 1, 3, 2, 1, 4 }) == 4);
     assert(ThreeSums({ 4, 1, 2 }) == 0);
 
-    chrono::time_point<chrono::high_resolution_clock> end = MarkTime();
+    time_point<high_resolution_clock> end = MarkTime();
 
     PrintTime(start, end);
 

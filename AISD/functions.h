@@ -2,13 +2,11 @@
 
 #include <vector>
 
-using namespace std;
 
+std::vector<int> CreateRandomVector(size_t size);
 
-vector<int> CreateRandomVector(size_t size);
+bool CheckSortedVector(const std::vector<int>& vec);
 
-bool CheckSortedVector(const vector<int>& vec);
+void PrintVectorIsSorted(const std::vector<int>& vec);
 
-void PrintVectorIsSorted(const vector<int>& vec);
-
-void PrintVector(const vector<int>& vec);
+void PrintVector(const std::vector<int>& vec);

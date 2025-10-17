@@ -2,11 +2,9 @@
 
 #include <vector>
 
-using namespace std;
 
+void SortInsert(std::vector<int>& vec);
 
-void SortInsert(vector<int>& vec);
+void SortBubble(std::vector<int>& vec);
 
-void SortBubble(vector<int>& vec);
-
-void SortInsertModern(vector<int>& vec);
+void SortInsertModern(std::vector<int>& vec);
