@@ -22,8 +22,7 @@ int main() {
     Time time;
     time.Start();
 
-    int k = FirstBadVersion(2000000000);
-    cout << k << endl;
+    cout << IsPerfectSquare(1024) << endl;
 
     time.End();
     time.PrintTime();
