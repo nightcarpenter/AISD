@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="binary_search.cpp" />
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="merge_sorts.cpp" />
@@ -131,6 +132,7 @@
     <ClCompile Include="two_pointers.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="binary_search.h" />
     <ClInclude Include="functions.h" />
     <ClInclude Include="merge_sort.h" />
     <ClInclude Include="n_square_sorts.h" />

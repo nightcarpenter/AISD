@@ -19,6 +19,11 @@ void Time::End() {
 
 
 void Time::PrintTime() {
+    if (!start_flag_ || !end_flag_) {
+        cout << "Not start or end time!" << endl;
+        return;
+    }
+
     auto duration = end_ - start_;
 
     auto hours = duration_cast<chrono::hours>(duration);

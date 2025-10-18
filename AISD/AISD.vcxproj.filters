@@ -33,6 +33,9 @@
     <ClCompile Include="two_pointers.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="binary_search.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="n_square_sorts.h">
@@ -48,6 +51,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="two_pointers.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="binary_search.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
