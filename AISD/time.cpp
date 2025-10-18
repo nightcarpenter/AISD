@@ -7,15 +7,19 @@ using namespace std;
 using namespace std::chrono;
 
 
-time_point<high_resolution_clock> MarkTime() {
-    return high_resolution_clock::now();
+void Time::Start() {
+    start_ = high_resolution_clock::now();
+    start_flag_ = true;
+}
+
+void Time::End() {
+    end_ = high_resolution_clock::now();
+    end_flag_ = true;
 }
 
 
-void PrintTime(time_point<high_resolution_clock> start,
-    time_point<high_resolution_clock> end) {
-
-    auto duration = end - start;
+void Time::PrintTime() {
+    auto duration = end_ - start_;
 
     auto hours = duration_cast<chrono::hours>(duration);
     auto minutes = duration_cast<chrono::minutes>(duration);

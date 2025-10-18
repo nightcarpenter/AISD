@@ -3,7 +3,15 @@
 #include <chrono>
 
 
-std::chrono::time_point<std::chrono::high_resolution_clock> MarkTime();
+class Time {
+private:
+    std::chrono::time_point<std::chrono::high_resolution_clock> start_;
+    std::chrono::time_point<std::chrono::high_resolution_clock> end_;
+    bool start_flag_ = false;
+    bool end_flag_ = false;
 
-void PrintTime(std::chrono::time_point<std::chrono::high_resolution_clock> start,
-    std::chrono::time_point<std::chrono::high_resolution_clock> end);
+public:
+    void Start();
+    void End();
+    void PrintTime();
+};

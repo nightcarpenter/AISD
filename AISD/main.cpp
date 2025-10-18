@@ -56,8 +56,14 @@ int firstBadVersion(int n) {
 
 
 int main() {
+    Time time;
+    time.Start();
+
     int k = firstBadVersion(2000000000);
     cout << k << endl;
+
+    time.End();
+    time.PrintTime();
 
     return 0;
 }
