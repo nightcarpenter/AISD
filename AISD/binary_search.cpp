@@ -1,6 +1,11 @@
 #include "binary_search.h"
 
+#include <vector>
 
+using namespace std;
+
+
+// 278. First Bad Version
 bool IsBadVersion(int k) {
     return (k < 1000000000) ? false : true;
 }
@@ -37,6 +42,7 @@ int FirstBadVersion(int n) {
 }
 
 
+// 367. Valid Perfect Square
 bool IsGoodSquere(unsigned k, unsigned target) {
     return k * k <= target;
 }
@@ -56,4 +62,32 @@ bool IsPerfectSquare(int num) {
     }
 
     return (l * l == num) ? true : false;
+}
+
+// 35. Search Insert Position
+bool IsLessThenTarget(int x, int target) {
+    return x <= target;
+}
+
+int SearchInsert(const vector<int>& nums, int target) {
+    if (target < nums[0]) {
+        return 0;
+    }
+
+    int l = 0;
+    int r = nums.size();
+    int m = (l + r) / 2;
+
+    while (r - l > 1) {
+        if (IsLessThenTarget(nums[m], target)) {
+            l = m;
+        }
+        else {
+            r = m;
+        }
+
+        m = (l + r) / 2;
+    }
+
+    return (nums[l] == target) ? l : r;
 }

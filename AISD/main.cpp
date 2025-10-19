@@ -22,7 +22,7 @@ int main() {
     Time time;
     time.Start();
 
-    cout << IsPerfectSquare(1024) << endl;
+    cout << SearchInsert({ 1, 3, 5, 6, 8, 20 }, 6) << endl;
 
     time.End();
     time.PrintTime();
