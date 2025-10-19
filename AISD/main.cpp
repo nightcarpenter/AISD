@@ -22,7 +22,7 @@ int main() {
     Time time;
     time.Start();
 
-    cout << SearchInsert({ 1, 3, 5, 6, 8, 20 }, 6) << endl;
+    cout << MySqrt(1023) << endl;
 
     time.End();
     time.PrintTime();

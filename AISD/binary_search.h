@@ -13,3 +13,7 @@ bool IsPerfectSquare(int num);
 // 35. Search Insert Position
 bool IsLessThenTarget(int x, int target);
 int SearchInsert(const std::vector<int>& nums, int target);
+
+// 69. Sqrt(x)
+bool IsSquereLessTarget(unsigned k, unsigned target);
+int MySqrt(int x);

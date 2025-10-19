@@ -91,3 +91,21 @@ int SearchInsert(const vector<int>& nums, int target) {
 
     return (nums[l] == target) ? l : r;
 }
+
+// 69. Sqrt(x)
+bool IsSquereLessTarget(unsigned k, unsigned target) {
+    return k * k <= target;
+}
+
+int MySqrt(int x) {
+    unsigned l = 0;
+    unsigned r = 46341;
+    unsigned m = (l + r) / 2;
+
+    while (r - l > 1) {
+        IsSquereLessTarget(m, x) ? l = m : r = m;
+        m = (r + l) / 2;
+    }
+
+    return l;
+}
