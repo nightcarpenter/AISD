@@ -109,3 +109,37 @@ int MySqrt(int x) {
 
     return l;
 }
+
+// 33. Search in Rotated Sorted Array
+int SearchInPartArray(const vector<int>& nums, int l, int r, int target) {
+    int m = (l + r) / 2;
+    while (r - l > 1) {
+        nums[m] <= target ? l = m : r = m;
+        m = (l + r) / 2;
+    }
+
+    return nums[l] == target ? l : -1;
+}
+
+int Search(const vector<int>& nums, int target) {
+    int last = nums[nums.size() - 1];
+    int l = 0;
+    int r = nums.size();
+    int m = (l + r) / 2;
+
+    if (last >= nums[0]) {
+        return SearchInPartArray(nums, l, r, target);
+    }
+
+    while (r - l > 1) {
+        nums[m] > last ? l = m : r = m;
+        m = (l + r) / 2;
+    }
+
+    if (target > last) {
+        return SearchInPartArray(nums, 0, l + 1, target);
+    }
+    else {
+        return SearchInPartArray(nums, r, nums.size(), target);
+    }
+}

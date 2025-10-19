@@ -17,3 +17,7 @@ int SearchInsert(const std::vector<int>& nums, int target);
 // 69. Sqrt(x)
 bool IsSquereLessTarget(unsigned k, unsigned target);
 int MySqrt(int x);
+
+// 33. Search in Rotated Sorted Array
+int SearchInPartArray(const std::vector<int>& nums, int l, int r, int target);
+int Search(const std::vector<int>& nums, int target);
