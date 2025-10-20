@@ -42,8 +42,12 @@ void PrintVectorIsSorted(const vector<int>& vec) {
 
 
 void PrintVector(const vector<int>& vec) {
-    for (auto x : vec) {
-        cout << x << "  ";
+    for (int i = 0; i < vec.size(); ++i) {
+        cout << vec[i] << "  ";
+        if (i > 9) {
+            cout << "...";
+            break;
+        }
     }
     cout << endl;
 }

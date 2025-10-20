@@ -143,3 +143,17 @@ int Search(const vector<int>& nums, int target) {
         return SearchInPartArray(nums, r, nums.size(), target);
     }
 }
+
+// 852. Peak Index in a Mountain Array
+int PeakIndexInMountainArray(vector<int>& arr) {
+    int l = 0;
+    int r = arr.size();
+    int m = (l + r) / 2;
+
+    while (r - l > 1) {
+        arr[m] > arr[m - 1] ? l = m : r = m;
+        m = (l + r) / 2;
+    }
+
+    return l;
+}
