@@ -22,9 +22,7 @@ int main() {
     Time time;
     time.Start();
 
-    vector<vector<int>> a{ {2, 4, 6}, {9, 80, 150}, {309, 1023, 3000} };
-
-    cout << SearchMatrix(a, 6) << endl;
+    PrintVector(FindClosestElements({ 1,1,2,2,2,2,2,3,3 }, 3, 3));
 
     time.End();
     time.PrintTime();

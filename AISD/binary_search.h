@@ -27,3 +27,6 @@ int PeakIndexInMountainArray(std::vector<int>& arr);
 
 // 74. Search a 2D Matrix
 bool SearchMatrix(std::vector<std::vector<int>>& matrix, int target);
+
+// 658. Find K Closest Elements
+std::vector<int> FindClosestElements(const std::vector<int>& arr, int k, int x);
