@@ -24,3 +24,6 @@ int Search(const std::vector<int>& nums, int target);
 
 // 852. Peak Index in a Mountain Array
 int PeakIndexInMountainArray(std::vector<int>& arr);
+
+// 74. Search a 2D Matrix
+bool SearchMatrix(std::vector<std::vector<int>>& matrix, int target);

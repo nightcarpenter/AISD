@@ -22,9 +22,9 @@ int main() {
     Time time;
     time.Start();
 
-    vector<int> a{2, 4, 6, 7, 80, 50, 3, 1, 0};
-    
-    cout << PeakIndexInMountainArray(a) << endl;
+    vector<vector<int>> a{ {2, 4, 6}, {9, 80, 150}, {309, 1023, 3000} };
+
+    cout << SearchMatrix(a, 6) << endl;
 
     time.End();
     time.PrintTime();

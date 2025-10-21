@@ -1,5 +1,6 @@
 #include "binary_search.h"
 
+#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -156,4 +157,46 @@ int PeakIndexInMountainArray(vector<int>& arr) {
     }
 
     return l;
+}
+
+// 74. Search a 2D Matrix
+bool SearchMatrix(vector<vector<int>>& matrix, int target) {
+    int x = matrix.size() - 1;
+    int y = matrix[0].size() - 1;
+
+    int l = 0;
+    int r = x + 1;
+    int m = (l + r) / 2;
+
+    while (r - l > 1) {
+        if (matrix[m][y] < target) {
+            l = m;
+        }
+        else if (matrix[m][0] > target) {
+            r = m;
+        }
+        else {
+            l = m;
+            break;
+        }
+        m = (l + r) / 2;
+
+    }
+
+    int row = l;
+    if (row < 0 || row > x) {
+        return false;
+    }
+
+    l = 0;
+    r = y + 1;
+    m = (l + r) / 2;
+
+    while (r - l > 1) {
+        matrix[row][m] <= target ? l = m : r = m;
+        m = (l + r) / 2;
+    }
+    int column = l;
+
+    return matrix[row][column] == target;
 }
