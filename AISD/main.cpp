@@ -4,6 +4,7 @@
 #include "merge_sort.h"
 #include "two_pointers.h"
 #include "binary_search.h"
+#include "random_leetcode.h"
 
 #include <iostream>
 #include <string>
@@ -22,7 +23,9 @@ int main() {
     Time time;
     time.Start();
 
-    PrintVector(FindClosestElements({ 1,1,2,2,2,2,2,3,3 }, 3, 3));
+    //PrintVector(FindClosestElements({ 1,1,2,2,2,2,2,3,3 }, 3, 3));
+
+    cout << AddBinary("1010", "1001") << endl;
 
     time.End();
     time.PrintTime();

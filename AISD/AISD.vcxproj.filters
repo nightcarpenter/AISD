@@ -36,6 +36,9 @@
     <ClCompile Include="binary_search.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="random_leetcode.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="n_square_sorts.h">
@@ -54,6 +57,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="binary_search.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="random_leetcode.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

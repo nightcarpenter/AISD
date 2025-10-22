@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <string>
 
 // 278. First Bad Version
 bool IsBadVersion(int k);
