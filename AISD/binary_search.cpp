@@ -219,3 +219,32 @@ vector<int> FindClosestElements(const vector<int>& arr, int k, int x) {
 
     return vector<int>(arr.begin() + l, arr.begin() + l + k);
 }
+
+// 374. Guess Number Higher or Lower
+int Guess(int num, int pick) {
+    if (num > pick) {
+        return -1;
+    }
+    else if (num < pick) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+int GuessNumber(int n, int pick) {
+    unsigned l = 1;
+    unsigned r = static_cast<unsigned>(n) + 1;
+
+    while (l < r) {
+        unsigned m = (l + r) / 2;
+        int condition = Guess(m, pick);
+
+        if (condition == 1) l = m + 1;
+        else if (condition == -1) r = m;
+        else return m;
+    }
+
+    return l;
+ }

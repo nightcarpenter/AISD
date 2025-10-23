@@ -31,3 +31,7 @@ bool SearchMatrix(std::vector<std::vector<int>>& matrix, int target);
 
 // 658. Find K Closest Elements
 std::vector<int> FindClosestElements(const std::vector<int>& arr, int k, int x);
+
+// 374. Guess Number Higher or Lower
+int Guess(int num, int pick);
+int GuessNumber(int n, int pick);

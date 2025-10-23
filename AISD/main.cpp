@@ -25,7 +25,7 @@ int main() {
 
     //PrintVector(FindClosestElements({ 1,1,2,2,2,2,2,3,3 }, 3, 3));
 
-    cout << AddBinary("1010", "1001") << endl;
+    cout << "ans: " << GuessNumber(987996543, 35) << endl;
 
     time.End();
     time.PrintTime();
