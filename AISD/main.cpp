@@ -20,13 +20,22 @@ using namespace std::chrono;
 
 
 int main() {
+    vector<int> arr1 = CreateRandomVector(10);
+    vector<int> arr2 = CreateRandomVector(100'000'000);
+    int k = 2'000;
+
     Time time;
+
     time.Start();
+    cout << "n * m" << endl;
+    cout << "ans: " << FindTheDistanceValue2(arr1, arr2, k) << endl;
 
-    //PrintVector(FindClosestElements({ 1,1,2,2,2,2,2,3,3 }, 3, 3));
+    time.End();
+    time.PrintTime();
 
-    cout << "ans: " << GuessNumber(987996543, 35) << endl;
-
+    time.Start();
+    cout << "\n\n(n + m) * log(m)" << endl;
+    cout << "ans: " << FindTheDistanceValue(arr1, arr2, k) << endl;
     time.End();
     time.PrintTime();
 
