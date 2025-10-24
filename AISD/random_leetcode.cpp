@@ -82,3 +82,28 @@ int FindTheDistanceValue2(const vector<int>& arr1, const vector<int>& arr2, int 
 
     return cnt;
 }
+
+// 1351. Count Negative Numbers in a Sorted Matrix
+int CountNegatives(vector<vector<int>>& grid) {
+    int m = grid[0].size();
+    int n = grid.size();
+
+    int cnt = 0;
+    int j = 0;
+    for (int i = n - 1; i >= 0; --i) {
+        if (j == m) {
+            break;
+        }
+
+        while (j < m) {
+            if (grid[i][j] < 0) {
+                cnt += m - j;
+                break;
+            }
+
+            ++j;
+        }
+    }
+
+    return cnt;
+}

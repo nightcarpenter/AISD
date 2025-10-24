@@ -20,22 +20,14 @@ using namespace std::chrono;
 
 
 int main() {
-    vector<int> arr1 = CreateRandomVector(10);
-    vector<int> arr2 = CreateRandomVector(100'000'000);
-    int k = 2'000;
+    vector<vector<int>> grid = { {4, 3, 2, -1}, {3, 2, 1, -1}, {1, 1, -1, -2}, {-1, -1, -2, -3} };
 
     Time time;
 
     time.Start();
-    cout << "n * m" << endl;
-    cout << "ans: " << FindTheDistanceValue2(arr1, arr2, k) << endl;
+    
+    cout << CountNegatives(grid) << endl;
 
-    time.End();
-    time.PrintTime();
-
-    time.Start();
-    cout << "\n\n(n + m) * log(m)" << endl;
-    cout << "ans: " << FindTheDistanceValue(arr1, arr2, k) << endl;
     time.End();
     time.PrintTime();
 

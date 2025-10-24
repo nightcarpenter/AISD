@@ -11,3 +11,6 @@ int FindTheDistanceValue(const std::vector<int>& arr1, const std::vector<int>& a
 
 // 1385. Find the Distance Value Between Two Arrays (n * m)
 int FindTheDistanceValue2(const std::vector<int>& arr1, const std::vector<int>& arr2, int d);
+
+// 1351. Count Negative Numbers in a Sorted Matrix
+int CountNegatives(std::vector<std::vector<int>>& grid);
