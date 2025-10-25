@@ -22,15 +22,20 @@ using namespace std::chrono;
 int main() {
     Time time;
 
-    vector<int> vec1 = { {4, 30, 202, 1254, 1345, 1378, 2098}};
-    vector<int> vec2 = { {41, 340, 2020, 1254, 13450, 14378, 26098} };
+    vector<int> vec1 = CreateRandomVector(10);
+    vector<int> vec2 = CreateRandomVector(10'000'000);
 
-
+    sort(vec1.begin(), vec1.end());
+    sort(vec2.begin(), vec2.end());
 
     time.Start();
-    
     cout << GetCommon(vec1, vec2) << endl;
+    time.End();
+    time.PrintTime();
+    cout << "\n" << endl;
 
+    time.Start();
+    cout << GetCommon2(vec1, vec2) << endl;
     time.End();
     time.PrintTime();
 

@@ -20,6 +20,9 @@ vector<int> CreateRandomVector(size_t size) {
 }
 
 
+
+
+
 bool CheckSortedVector(const vector<int>& vec) {
     bool sorted_flag = true;
     for (size_t i = 1; i < vec.size(); ++i) {
@@ -44,7 +47,7 @@ void PrintVectorIsSorted(const vector<int>& vec) {
 void PrintVector(const vector<int>& vec) {
     for (int i = 0; i < vec.size(); ++i) {
         cout << vec[i] << "  ";
-        if (i > 9) {
+        if (i > 5) {
             cout << "...";
             break;
         }
