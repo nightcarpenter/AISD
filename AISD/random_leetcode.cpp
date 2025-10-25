@@ -107,3 +107,38 @@ int CountNegatives(vector<vector<int>>& grid) {
 
     return cnt;
 }
+
+// 2540. Minimum Common Value (n * log(m) || m * log(n))
+int GetCommon(vector<int>& nums1, vector<int>& nums2) {
+    int n1 = nums1.size();
+    int n2 = nums2.size();
+
+    vector<int>& arr1 = nums1;
+    vector<int>& arr2 = nums2;
+    if (n1 > n2) {
+        vector<int>& arr1 = nums2;
+        vector<int>& arr2 = nums1;
+    }
+
+    for (int i = 0; i < arr1.size(); ++i) {
+        int l = 0;
+        int r = arr2.size();
+        int m = l + (r - l) / 2;
+        while (r - l > 1) {
+            if (arr2[m] <= arr1[i]) {
+                l = m;
+            }
+            else {
+                r = m;
+            }
+            m = l + (r - l) / 2;
+        }
+
+        if (arr2[l] == arr1[i]) {
+            return arr1[i];
+        }
+    }
+
+    return -1;
+}
+

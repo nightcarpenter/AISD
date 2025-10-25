@@ -14,3 +14,6 @@ int FindTheDistanceValue2(const std::vector<int>& arr1, const std::vector<int>& 
 
 // 1351. Count Negative Numbers in a Sorted Matrix
 int CountNegatives(std::vector<std::vector<int>>& grid);
+
+// 2540. Minimum Common Value
+int GetCommon(std::vector<int>& nums1, std::vector<int>& nums2);

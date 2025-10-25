@@ -20,13 +20,16 @@ using namespace std::chrono;
 
 
 int main() {
-    vector<vector<int>> grid = { {4, 3, 2, -1}, {3, 2, 1, -1}, {1, 1, -1, -2}, {-1, -1, -2, -3} };
-
     Time time;
+
+    vector<int> vec1 = { {4, 30, 202, 1254, 1345, 1378, 2098}};
+    vector<int> vec2 = { {41, 340, 2020, 1254, 13450, 14378, 26098} };
+
+
 
     time.Start();
     
-    cout << CountNegatives(grid) << endl;
+    cout << GetCommon(vec1, vec2) << endl;
 
     time.End();
     time.PrintTime();
