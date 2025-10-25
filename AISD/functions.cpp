@@ -19,9 +19,15 @@ vector<int> CreateRandomVector(size_t size) {
     return numbers;
 }
 
+vector<int> CreateRandomVectorFast(size_t size) {
+    vector<int> numbers(size);
+    static std::minstd_rand gen(42);
 
-
-
+    for (int& num : numbers) {
+        num = gen();
+    }
+    return numbers;
+}
 
 bool CheckSortedVector(const vector<int>& vec) {
     bool sorted_flag = true;
@@ -54,3 +60,4 @@ void PrintVector(const vector<int>& vec) {
     }
     cout << endl;
 }
+

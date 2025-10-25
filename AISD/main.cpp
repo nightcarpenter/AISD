@@ -22,8 +22,8 @@ using namespace std::chrono;
 int main() {
     Time time;
 
-    vector<int> vec1 = CreateRandomVector(10);
-    vector<int> vec2 = CreateRandomVector(10'000'000);
+    vector<int> vec1 = CreateRandomVectorFast(10);
+    vector<int> vec2 = CreateRandomVectorFast(100'000'000);
 
     sort(vec1.begin(), vec1.end());
     sort(vec2.begin(), vec2.end());
