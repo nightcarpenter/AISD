@@ -22,22 +22,14 @@ using namespace std::chrono;
 int main() {
     Time time;
 
-    vector<int> vec1 = CreateRandomVectorFast(10);
-    vector<int> vec2 = CreateRandomVectorFast(100'000'000);
-
-    sort(vec1.begin(), vec1.end());
-    sort(vec2.begin(), vec2.end());
+    vector<int> vec1{1, 1, 1, 2, 2, 3, 3, 3, 7, 8, 8, 8, 9};
 
     time.Start();
-    cout << GetCommon(vec1, vec2) << endl;
+    cout << RemoveDuplicates(vec1) << endl;
     time.End();
     time.PrintTime();
-    cout << "\n" << endl;
 
-    time.Start();
-    cout << GetCommon2(vec1, vec2) << endl;
-    time.End();
-    time.PrintTime();
+    PrintVector(vec1);
 
     return 0;
 }

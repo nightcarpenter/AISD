@@ -104,3 +104,22 @@ int ThreeSums(const vector<int>& x) {
 
     return res;
 }
+
+// 26. Remove Duplicates from Sorted Array
+int RemoveDuplicates(vector<int>& nums) {
+    int cnt = 1;
+    int i = 1;
+    int j = 1;
+
+    while (i < nums.size()) {
+        if (nums[i] != nums[i - 1]) {
+            nums[j] = nums[i];
+            ++cnt;
+            ++j;
+        }
+
+        ++i;
+    }
+
+    return cnt;
+}

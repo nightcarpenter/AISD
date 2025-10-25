@@ -12,3 +12,6 @@ int TwoPointers1(const std::vector<int>& a, int t);
 int TwoPointers2(const std::vector<int>& a);
 
 int ThreeSums(const std::vector<int>& x);
+
+// 26. Remove Duplicates from Sorted Array
+int RemoveDuplicates(std::vector<int>& nums);
