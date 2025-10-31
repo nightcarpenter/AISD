@@ -21,15 +21,8 @@ using namespace std::chrono;
 
 int main() {
     Time time;
-
-    vector<int> vec1{1, 1, 1, 2, 2, 3, 3, 3, 7, 8, 8, 8, 9};
-
-    time.Start();
-    cout << RemoveDuplicates(vec1) << endl;
-    time.End();
-    time.PrintTime();
-
-    PrintVector(vec1);
-
+    vector<int> nums = { 3, 2, 2, 3 };
+    cout << RemoveElement(nums, 3) << endl;
+    PrintVector(nums);
     return 0;
 }

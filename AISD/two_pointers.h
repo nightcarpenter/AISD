@@ -15,3 +15,6 @@ int ThreeSums(const std::vector<int>& x);
 
 // 26. Remove Duplicates from Sorted Array
 int RemoveDuplicates(std::vector<int>& nums);
+
+// 27. Remove Element
+int RemoveElement(std::vector<int>& nums, int val);

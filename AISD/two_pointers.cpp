@@ -123,3 +123,36 @@ int RemoveDuplicates(vector<int>& nums) {
 
     return cnt;
 }
+
+
+// 27. Remove Element
+int RemoveElement(vector<int>& nums, int val) {
+    if (nums.empty()) {
+        return 0;
+    }
+
+    int i = 0;
+    int j = nums.size() - 1;
+
+    while (i <= j) {
+        if (nums[i] != val) {
+            ++i;
+        }
+        else {
+            while (i < j && nums[j] == val) {
+                --j;
+            }
+
+            if (i == j) {
+                break;
+            }
+            else {
+                nums[i] = nums[j];
+                --j;
+                ++i;
+            }
+        }
+    }
+
+    return i;
+}
