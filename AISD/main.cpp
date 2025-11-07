@@ -21,8 +21,9 @@ using namespace std::chrono;
 
 int main() {
     Time time;
-    vector<int> nums = { 3, 2, 2, 3 };
-    cout << RemoveElement(nums, 3) << endl;
-    PrintVector(nums);
+    vector<int> nums1 = { 0, 5, 27, 30, 0, 0, 0, 0, 0 };
+    vector<int> nums2 = { -11, -2, 0, 21, 70 };
+    MergeSortedArray(nums1, 4, nums2, 5);
+    PrintVector(nums1);
     return 0;
 }

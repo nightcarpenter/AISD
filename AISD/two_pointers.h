@@ -18,3 +18,6 @@ int RemoveDuplicates(std::vector<int>& nums);
 
 // 27. Remove Element
 int RemoveElement(std::vector<int>& nums, int val);
+
+// 88. Merge Sorted Array
+void MergeSortedArray(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n);
