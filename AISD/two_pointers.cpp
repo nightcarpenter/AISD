@@ -172,3 +172,27 @@ void MergeSortedArray(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         }
     }
 }
+
+// 283. Move Zeroes
+void MoveZeroes(vector<int>& nums) {
+    int n = nums.size();
+    int i = 0;
+    int j = 1;
+
+    while (i < n && j < n) {
+        if (nums[i] == 0 && nums[j] != 0) {
+            int buf = nums[i];
+            nums[i] = nums[j];
+            nums[j] = buf;
+            ++i;
+            ++j;
+        }
+        else if (nums[i] == 0 && nums[j] == 0) {
+            ++j;
+        }
+        else {
+            ++i;
+            ++j;
+        }
+    }
+}
