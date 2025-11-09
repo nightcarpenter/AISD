@@ -21,8 +21,8 @@ using namespace std::chrono;
 
 int main() {
     Time time;
-    vector<int> nums = { 0, 5, 27, 0, 0, 70 };
-    MoveZeroes(nums);
+    vector<char> nums = { '1', 'f', 'y', '9'};
+    ReverseString(nums);
     PrintVector(nums);
     return 0;
 }

@@ -24,3 +24,6 @@ void MergeSortedArray(std::vector<int>& nums1, int m, std::vector<int>& nums2, i
 
 // 283. Move Zeroes
 void MoveZeroes(std::vector<int>& nums);
+
+// 344. Reverse String
+void ReverseString(std::vector<char>& s);

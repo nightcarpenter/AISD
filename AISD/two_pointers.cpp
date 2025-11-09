@@ -196,3 +196,16 @@ void MoveZeroes(vector<int>& nums) {
         }
     }
 }
+
+// 344. Reverse String
+void ReverseString(vector<char>& s) {
+    int first = 0;
+    int last = s.size() - 1;
+    char buf;
+
+    while (last - first > 0) {
+        buf = s[first];
+        s[first++] = s[last];
+        s[last--] = buf;
+    }
+}

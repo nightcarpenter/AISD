@@ -12,3 +12,4 @@ bool CheckSortedVector(const std::vector<int>& vec);
 void PrintVectorIsSorted(const std::vector<int>& vec);
 
 void PrintVector(const std::vector<int>& vec);
+void PrintVector(const std::vector<char>& vec);

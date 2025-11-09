@@ -39,7 +39,6 @@ bool CheckSortedVector(const vector<int>& vec) {
     return sorted_flag;
 }
 
-
 void PrintVectorIsSorted(const vector<int>& vec) {
     if (CheckSortedVector(vec)) {
         cout << "Vector is sorted!" << endl;
@@ -47,6 +46,17 @@ void PrintVectorIsSorted(const vector<int>& vec) {
     else {
         cout << "Not sorted..." << endl;
     }
+}
+
+void PrintVector(const vector<char>& vec) {
+    for (int i = 0; i < vec.size(); ++i) {
+        cout << vec[i] << "  ";
+        if (i > 5) {
+            cout << "...";
+            break;
+        }
+    }
+    cout << endl;
 }
 
 
