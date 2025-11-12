@@ -21,8 +21,7 @@ using namespace std::chrono;
 
 int main() {
     Time time;
-    vector<char> nums = { '1', 'f', 'y', '9'};
-    ReverseString(nums);
+    vector<int> nums = Intersection({ 11, 3, 6, 78, 90 }, { 22, 3, 90, 3 });
     PrintVector(nums);
     return 0;
 }

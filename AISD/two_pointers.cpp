@@ -209,3 +209,17 @@ void ReverseString(vector<char>& s) {
         s[last--] = buf;
     }
 }
+
+// 349. Intersection of Two Arrays
+vector<int> Intersection(const vector<int>& nums1, const vector<int>& nums2) {
+    unordered_set<int> s(nums2.begin(), nums2.end());
+    vector<int> res;
+
+    for (int element : nums1) {
+        if (s.erase(element)) {
+            res.push_back(element);
+        }
+    }
+
+    return res;
+}

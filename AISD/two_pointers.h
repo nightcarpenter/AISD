@@ -1,6 +1,8 @@
 #pragma once
 
 #include <vector>
+#include <set>
+#include <unordered_set>
 
 
 std::vector<int> MergeTwo(const std::vector<int>& a, const std::vector<int>& b);
@@ -27,3 +29,6 @@ void MoveZeroes(std::vector<int>& nums);
 
 // 344. Reverse String
 void ReverseString(std::vector<char>& s);
+
+// 349. Intersection of Two Arrays
+std::vector<int> Intersection(const std::vector<int>& nums1, const std::vector<int>& nums2);
