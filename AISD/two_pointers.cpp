@@ -223,3 +223,25 @@ vector<int> Intersection(const vector<int>& nums1, const vector<int>& nums2) {
 
     return res;
 }
+
+// 977. Squares of a Sorted Array
+vector<int> SortedSquares(vector<int>& nums) {
+    int n = nums.size();
+    vector<int> res(n, 0);
+    int l = 0;
+    int r = n - 1;
+    int i = n - 1;
+
+    while (r >= l) {
+        if (nums[r] > (-1) * nums[l]) {
+            res[i] = nums[r] * nums[r];
+            --r;
+        }
+        else {
+            res[i] = nums[l] * nums[l];
+            ++l;
+        }
+        --i;
+    }
+    return res;
+}

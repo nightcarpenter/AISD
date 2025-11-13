@@ -21,7 +21,9 @@ using namespace std::chrono;
 
 int main() {
     Time time;
-    vector<int> nums = Intersection({ 11, 3, 6, 78, 90 }, { 22, 3, 90, 3 });
+    vector<int> nums = {-5, -3, 0, 4, 5, 11};
+    nums = SortedSquares(nums);
     PrintVector(nums);
+
     return 0;
 }

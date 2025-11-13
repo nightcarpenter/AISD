@@ -32,3 +32,6 @@ void ReverseString(std::vector<char>& s);
 
 // 349. Intersection of Two Arrays
 std::vector<int> Intersection(const std::vector<int>& nums1, const std::vector<int>& nums2);
+
+// 977. Squares of a Sorted Array
+std::vector<int> SortedSquares(std::vector<int>& nums);
